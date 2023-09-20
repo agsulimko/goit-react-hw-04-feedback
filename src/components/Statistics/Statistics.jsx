@@ -1,5 +1,6 @@
    import Notification from '../Notification/Notification'; // Импортируйте компонент Notification
 import  css from './Statistics.module.css';
+
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <div className={css.statistics}>
         <h3 className={css.titleStatistics}>Statistics</h3>
