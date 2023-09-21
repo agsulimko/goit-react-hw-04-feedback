@@ -9,67 +9,40 @@ import { useState } from 'react';
       
 
 
-
 const Section=()=> {
 
 
     const [good, setGood] = useState(0);
     const [neutral, setNeutral] = useState(0);
     const [bad, setBad] = useState(0);
-    const [total, setTotal] = useState(0);
-    const [positiveFeedback, setPositiveFeedback] = useState(0);
+    // const [total, setTotal] = useState(0);
+    // const [positiveFeedback, setPositiveFeedback] = useState(0);
 
-    // state = {
-    //     good: this.props.initialGood,
-    //     neutral: this.props.initialNeutral,
-    //     bad: this.props.initialBad,
-    //     total: this.props.initialTotal,
-    //     positiveFeedback: this.props.initialPositiveFeedback,
+
          
-    // };
-  
+    
+//  ========================================================= 
     
  const   handleGood = (event) => {
-        // this.setState(prevState => {
-        //     return {
-        //         good: prevState.good + 1,      
-        //     };
-        // });
-            setGood(prev=> prev+1);
-        
-        // const target = event.target;
-        // const { target } = event;
+            setGood(prev=> prev+1);      
         console.log('Добавить хорошо');
         console.log(good);
-  
     }
 
-    
-
       const  handleNeutral = (event) => {
-            // this.setState(prevState => {
-            //     return {
-            //         neutral: prevState.neutral + 1,
-            //     };
-            // });
          setNeutral(prev =>prev + 1 );
-
             console.log('Добавить нейтрально');
             console.log(neutral);
         }
 
-
-
     const    handleBad = (event) => {
-            // this.setState(prevState => {
-            //     return {
-            //         bad: prevState.bad + 1,
-            //     };
-            // });
             setBad(prev=> prev+1);
             console.log('Добавить плохо');
             console.log(bad);
         }
+// =================================================
+
+
 
 const countTotalFeedback=(good, neutral, bad)=> {
   return   good + neutral + bad
