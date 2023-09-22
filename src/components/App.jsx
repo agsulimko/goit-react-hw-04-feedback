@@ -24,11 +24,11 @@ export const App = () => {
     return Math.round(((good + neutral) * 100) / sum);
   };
 
-  const handleChange = ({ target }) => {
-    console.dir(target.value);
-    if (target.textContent === "good") setGood((prev) => prev + 1);
-    if (target.textContent === "neutral") setNeutral((prev) => prev + 1);
-    if (target.textContent === "bad") setBad((prev) => prev + 1);
+  const handleChange = ({ target: { textContent } }) => {
+    console.log(textContent);
+    if (textContent === "good") setGood((prev) => prev + 1);
+    if (textContent === "neutral") setNeutral((prev) => prev + 1);
+    if (textContent === "bad") setBad((prev) => prev + 1);
   };
 
   return (
